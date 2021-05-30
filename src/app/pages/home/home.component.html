@@ -299,10 +299,11 @@
     </div>
   </section>
   <section class="bg-purple-2 bg-purple-square" fxLayoutAlign="center" fxLayout="column">
-    <div class="video" fxLayout="row">
+    <a (click)="openVideo()" class="video" fxLayout="row">
       <img src="../../../assets/images/[removido]" srcset="assets/images/[removido] 2x" />
       <mat-icon svgIcon="play"></mat-icon>
-    </div>
+    </a>
+    <app-video-modal fxHide></app-video-modal>
     <div fxLayout="row" class="container">
       <div class="way" fxLayout="column" fxLayoutAlign="center center">
         <div fxLayout="column" fxLayoutGap="24px">

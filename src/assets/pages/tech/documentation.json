@@ -1,0 +1,77 @@
+[
+  {
+    "title": "Onde pedir ajuda?",
+    "texts": [
+      "A comunidade de pessoas envolvidas no Querido Diário é muito receptiva, temos um <a href='[removido] target='_blank'>canal no Discord</a> onde trocamos ideias e dúvidas sobre nossos projetos. Entre e se apresente! Por lá, organizamos reuniões periódicas com as pessoas que mantêm o projeto.",
+      "Caso tenha alguma dúvida sobre o projeto e a nossa comunidade, você também pode nos enviar um email pelo seguinte endereço: <a href='mailto:[removido]'>[removido]<a/>."
+    ]
+  },
+  {
+    "title": "O escopo do Querido Diário",
+    "texts": [
+      "O Querido Diário é um projeto de código aberto da <a href='https://ok.org.br/'>Open Knowledge Brasil</a> - junto a valiosas contribuições da comunidade - que está usando tecnologia para libertar e centralizar as informações publicadas nos diários oficiais dos municípios, hoje presas em PDFs obscuros de acesso complicado. Todo ato público, para que seja válido no Brasil, deve ser publicado em um diário oficial, ou seja, desde o governo federal, tribunais e até a câmara de vereadores da sua cidade, todos divulgam atos oficiais em arquivos que devem ser acessíveis pela população.",
+      "O escopo atual do projeto está em coletar os atos do poder executivo dos 5.570 municípios brasileiros. É uma iniciativa muito ambiciosa dada a diversidade de desafios e barreiras para se acessar esses dados, desde a falta de padronização até a escassez de recursos de tecnologias que muitos municípios brasileiros possuem para manterem informações públicas acessíveis na internet."
+    ]
+  },
+  {
+    "title": "Arquitetura",
+    "texts": [
+      "O projeto conta com diversos sistemas para que o diário publicado no site do órgão publicador chegue aqui de forma aberta e que torne acessível a interação com essa base de dados. A imagem abaixo ilustra superficialmente como as peças interagem para termos esse fluxo de dados completo:"
+    ],
+    "images": [
+      {
+        "src": "../../../assets/images/arch.png",
+        "height": "612px",
+        "heightXs": "306px"
+      }
+    ]
+  },
+  {
+    "title": "Contribua com código",
+    "texts": [
+      "Olá! Quer contribuir para o Querido Diário? Aqui você vai encontrar todas as informações para entender cada parte do projeto. Dessa forma, poderá decidir por onde começar de acordo com o seu interesse e de forma mais confortável.",
+      "Todos os nossos códigos estão no <a href='https://github.com/okfn-brasil' target='_blank'>Github da OKBR</a> e estão sob licenças de software explícitas na raíz de cada repositório. Dessa forma, reforçamos que todo o projeto tem seu código fonte aberto para a comunidade.",
+      "A maior parte do desenvolvimento técnico no projeto foi feita por uma comunidade incrível. Essas pessoas trabalharam voluntariamente por anos ajudando a OKBR a chegar na estrutura atual do Querido Diário."
+    ]
+  },
+  {
+    "title": "Processamento de dados",
+    "texts": [
+      "Esta etapa é essencial pois é aqui que acontece a mágica de transformar dados fechados em abertos e conectar outras etapas do nosso fluxo de dados. <a href='kfn-brasil/querido-diario-data-processing' target='_blank'>No repositório</a> você encontrará várias tecnologias como: <a href='https://tika.apache.org/' target='_blank'>Apache Tika</a> para extrair texto de documentos de vários formatos, <a href='https://www.elastic.co/' target='_blank'>elasticsearch</a> para interagir com o indexador de texto dos documentos, <a href='https://www.postgresql.org/' target='_blank'>postgresql</a> para interagir com os dados extraídos das spiders e muito Python puro."
+    ]
+  },
+  {
+    "title": "Coleta de dados",
+    "texts": [
+      "Para entender o Querido Diário, é muito importante saber como funciona a estrutura de coleta de arquivos de diários oficiais. Todos os scripts são desenvolvidos utilizando o framework Scrapy, ferramenta muito popular para raspagem de dados. Caso nunca tenha utilizado, o tutorial é um ótimo caminho para aprender a fazer seus primeiros scripts de coleta de dados. Temos um repositório direcionado para organizar a coleta de arquivos. Nele, você encontrará arquivos em Python  desenvolvidos pela comunidade para cada município, chamamos esses arquivos de spiders (Spider é o termo utilizado para um script de raspagem de dados no Scrapy)."
+    ]
+  },
+  {
+    "title": "Censo",
+    "texts": [
+      "Antes de alguém conseguir escrever um spider para um município é importante sabermos em qual site os arquivos do diário oficial estão sendo publicados, e isso não é tão simples. Estamos falando de um país com 5.570 municípios que publicam seus atos públicos sem nenhum padrão, dentre eles alguns publicam em sites de associações, empresas privadas ou até mesmo site de outros entes da federação, e tudo isso sem nenhuma gestão de fluxo da informação.",
+      "Por isso, nós criamos uma iniciativa de mapeamento das fontes de publicação, o <a href='https://censo.ok.org.br' target='_blank'>Censo Querido Diário<a/>, onde qualquer pessoa pode preencher um formulário e nos enviar a fonte de publicação de diários oficiais de um município.",
+      "Todas as fontes de publicação enviadas são validadas por um time voluntário e estão sendo feitas análises de dados que irão compor relatórios sobre o diagnóstico de como está esse retrato de divulgação de atos públicos no Brasil. Com acesso à base de dados você consegue utilizar a linguagem R e Python para realizar análises exploratórias e contribuir no nosso <a href='https://github.com/okfn-brasil/censo-querido-diario' target='_blank'>repositório do censo<a/>."
+    ]
+  },
+  {
+    "title": "Toolbox",
+    "texts": [
+      "O objetivo do Querido <a href='https://github.com/okfn-brasil/querido-diario-toolbox' target='_blank'>Diário Toolbox</a> é fornecer para a comunidade um conjunto de ferramentas que possibilitem a análise e manipulação dos dados extraídos de diários oficiais. Com o toolbox, ampliamos as possibilidades de novos projetos que se utilizem da base de dados e compartilhamos conhecimento acumulado na limpeza e tratamento de dados que o projeto já enfrentou. O toolbox, inclusive, é utilizado internamente pela equipe da OKBR para o tratamento dos diários que são oferecidos na API; ele permite a extração de dados, metadados, limpeza de caracteres irrelevantes e extração de CPF e CNPJ. O toolbox não é, nem nunca será, um projeto concluído: com o apoio da comunidade, vamos sempre adicionar novas ferramentas e disponibilizá-las a todas as pessoas interessadas no projeto!"
+    ]
+  },
+  {
+    "title": "API pública",
+    "texts": [
+      "A <a href='https://queridodiario.ok.org.br/api/docs' target='_blank'>API pública</a> é uma das camadas principais do projeto, pois permite a divulgação da base de dados de uma forma acessível e automatizável por máquinas, além de promover um acesso direto aos dados para pessoas desenvolvedoras e pesquisadoras. Além disso, a plataforma consome os dados da API para a disponibilização dos dados para o público geral.",
+      "A API foi construída em Python com <a href='https://fastapi.tiangolo.com/' target='blank'>FastAPI</a> e é integrada ao <a href='https://swagger.io/' target='blank'>Swagger</a> para a obtenção da documentação de forma automática. Você pode contribuir com ideias para a API no <a href='https://github.com/okfn-brasil/querido-diario-api' target='_blank'>repositório oficial</a>."
+    ]
+  },
+  {
+    "title": "Front end",
+    "texts": [
+      "O front end é este que vos fala. Esta plataforma de busca é uma interface visual de interação com a API pública e também uma ferramenta de difusão de conhecimento e incentivo ao uso de diários oficiais.",
+      "O seu desenvolvimento é principalmente feito em Angular com Typescript, com responsividade para dispositivos móveis em primeiro lugar. Se te interessou contribuir, o <a href='https://github.com/okfn-brasil/querido-diario-frontend' target='_blank'>repositório oficial<a/> também é aberto."
+    ]
+  }
+]

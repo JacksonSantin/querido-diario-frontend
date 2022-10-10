@@ -1,0 +1,43 @@
+name: 🐞 Relato de problema
+description: Informe um problema encontrado
+labels: [bug]
+body:
+- type: markdown
+  attributes:
+    value: |
+      Agradecemos por reportar este problema! 🐛
+
+      Caso você precise de ajuda em tempo real, participe da [comunidade no Discord]([removido]).
+
+      Não sendo o caso, conte-nos mais abaixo.
+- type: textarea
+  attributes:
+    label: Passos para reproduzir
+    description: Passos para reproduzir o problema.
+    placeholder: |
+      1.
+      2.
+      3.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Comportamento atual
+    description: Uma descrição concisa do que está acontecendo.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Comportamento esperado
+    description: Uma descrição concisa do que era esperado acontecer.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Informações adicionais
+    description: |
+      Prints, termos pesquisados, cidade, período, qualquer informação que nos dê um maior contexto sobre o problema encontrado.
+
+      Dica: Você pode anexar imagens clicando nesta área para ativá-la e arrastando os arquivos para cá.
+  validations:
+    required: false

@@ -2,21 +2,21 @@
   "title": "REDES SOCIAIS",
   "icons": [
     {
-      "file": "twitter",
+      "file": "bluesky",
       "height": 36,
       "width": 36,
-      "to": "[removido]",
+      "to": "https://bsky.app/profile/ok.org.br",
+      "target": "_blank"
+    },
+    {
+      "file": "mastodon",
+      "height": 36,
+      "width": 36,
+      "to": "https://mastodon.social/@okbr",
       "target": "_blank"
     },
     {
       "file": "instagram",
-      "height": 36,
-      "width": 36,
-      "to": "[removido]",
-      "target": "_blank"
-    },
-    {
-      "file": "facebook",
       "height": 36,
       "width": 36,
       "to": "[removido]",

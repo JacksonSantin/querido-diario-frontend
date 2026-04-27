@@ -1,0 +1,18 @@
+{
+  "title": "Relatórios",
+  "text": "Publicações que detalham as tecnologias utilizadas no Querido Diário",
+  "items": [
+    {
+      "title": "1º Relatório Técnico de Atividades",
+      "text": "Um detalhamento dos aspectos técnicos da primeira fase do Querido Diário.",
+      "actions": [
+        {
+          "text": "Acessar",
+          "icon": "right-arrow",
+          "to": "https://querido-diario-static.nyc3.cdn.digitaloceanspaces.com/documents/reports/1o-relatorio-tecnico-atividades.pdf",
+          "target": "_blank"
+        }
+      ]
+    }
+  ]
+}

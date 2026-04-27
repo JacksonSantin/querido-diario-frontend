@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Entenda o Querido Diário",
+    "texts": [
+      "Para o arquivo do diário oficial sair do site do município e ser acessível para você por meio do Querido Diário, ele passa por algumas etapas:",
+      "A <b>coleta</b> onde colocamos robôs raspadores para trabalhar a nosso favor visitando, todos os dias, os sites publicadores dos municípios integrados para obter os arquivos de diários oficiais originais. Aqui, usamos Python e Scrapy para raspagem e o banco de dados PostgreSQL para armazenamento.",
+      "No <b>processamento</b> tratamos o arquivo coletado, principalmente extraindo o conteúdo textual de arquivos fechados (no geral, PDFs) para um formato aberto e pesquisável. E é o uso de Python, Apache Tika (extração) e OpenSearch (motor de busca textual) que tornam isso possível.",
+      "Na <b>disponibilização</b>, criamos meios para acesso aos nossos dados. Qualquer pessoa pode fazer pesquisas de forma amigável com o buscador na página inicial deste site, desenvolvido em TypeScript e Angular. E qualquer computador pode fazer pesquisas de forma programática por meio da API Pública, desenvolvida em Python com FastAPI.",
+      "A imagem a seguir resume como as peças interagem para termos esse fluxo de dados completo."
+    ],
+    "images": [
+      {
+        "src": "https://querido-diario-static.nyc3.cdn.digitaloceanspaces.com/docs/qd-architecture_ptbr.png",
+        "height": "612px",
+        "heightXs": "306px"
+      }
+    ]
+  },
+  {
+    "title": "Documentação",
+    "texts": [
+      "Esse foi apenas um “Olá, Mundo!” do Querido Diário. Para conhecê-lo em maior profundidade, tem seções mais detalhadas na documentação técnica.",
+      "<b>Acesse <a href='https://docs.queridodiario.ok.org.br' target='_blank'>docs.queridodiario.ok.org.br</a></b>"
+    ]
+  },
+  {
+    "title": "Contribua",
+    "texts": [
+      "Você pode contribuir de diferentes maneiras, desde produzindo conhecimento a partir de pesquisa nos diários oficiais ou aprimorando o código do projeto."
+    ]
+  },
+  {
+    "title": "Utilizando os dados para gerar conhecimento relevante",
+    "texts": [
+      "Estamos nessa empreitada de facilitar o acesso aos diários oficiais por acreditar que são informações valiosas para a sociedade. Por isso, usá-los para gerar conhecimento sobre o país a partir dos municípios é uma forma de contribuição muito rica e que nos ajuda a tornar concreta a importância do Querido Diário. Em especial, pessoas de perfis de jornalismo, gestão pública, direito, sociologia, história, etc, podem se beneficiar de nossos dados em suas investigações ou pesquisas.",
+      "<b>Se você produzir material a partir de consulta com o Querido Diário, ou tem interesse em fazê-lo, entre em contato por e-mail (<a href='mailto:[removido]'>queridodiario ARROBA ok.org.br</a>). Assim temos mais compreensão dos usos que estão sendo feitos e, também, podemos registrar seus achados, aqui, no site</b>"
+    ]
+  },
+  {
+    "title": "Melhorando e expandindo o código",
+    "texts": [
+      "O Querido Diário é um conjunto de softwares livres. Desde sua concepção, a maior parte do progresso técnico foi feito por uma comunidade desenvolvedora incrível, que possibilitou chegarmos na atual estrutura do projeto, além de seguir nos fortalecendo cotidianamente.",
+      "Todos os códigos ficam hospedados em <a href='https://github.com/orgs/okfn-brasil/repositories?q=querido-diario' target='_blank'>repositórios no GitHub</a> e, neles, você pode contribuir onde for de maior interesse e compatibilidade. Os principais repositórios e seus desafios são:",
+      "<b>Raspadores</b>: desenvolver ou dar manutenção em robôs raspadores para os sites de diários oficiais de todos os municípios brasileiros. Acesse <a href='https://github.com/okfn-brasil/querido-diario' target='_blank'>github.com/okfn-brasil/querido-diario</a>",
+      "<b>Processamento de Dados</b>: utilizar Ciência de Dados para tratar o texto puro de diferentes tipos de diários oficiais. Acesse <a href='https://github.com/okfn-brasil/querido-diario-data-processing' target='_blank'>github.com/okfn-brasil/querido-diario-data-processing</a>",
+      "<b>Frontend</b>: melhorar e expandir os recursos e ferramentas do site. Acesse <a href='https://github.com/okfn-brasil/querido-diario-frontend' target='_blank'>github.com/okfn-brasil/querido-diario-frontend</a>"
+    ]
+  },
+  {
+    "title": "Fazendo parte da comunidade",
+    "texts": [
+      "Seja por interesse nos dados, nos códigos ou pura curiosidade, faça parte dos nossos espaços de comunidade. Temos diversos chats temáticos no servidor de Discord da OKBR e, neles, conversamos sobre o Querido Diário, organizamos seu desenvolvimento técnico, damos apoio tirando dúvidas e articulamos eventos. Reuniões recorrentes também acontecem nesse espaço, justamente para serem abertas para qualquer pessoa participar.",
+      "<b>Acesse <a href='https://go.ok.org.br/discord' target='_blank'>go.ok.org.br/discord</a></b>",
+      "Para facilitar o acompanhamento das diversas atividades, sempre mantemos atualizada uma agenda para a comunidade. É possível se inscrever na agenda para receber notificação, com frequência da sua escolha, sobre os eventos.",
+      "<b>Acesse <a href='https://go.ok.org.br/agenda-comunidade' target='_blank'>go.ok.org.br/agenda-comunidade</a></b>"
+    ]
+  }
+]

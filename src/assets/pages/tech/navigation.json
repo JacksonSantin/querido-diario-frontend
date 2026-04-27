@@ -1,0 +1,27 @@
+{
+  "title": "Tecnologia",
+  "text": "O Querido Diário é um ambicioso projeto de código livre e conta com a contribuição da comunidade de tecnologia para evoluir. Saiba mais sobre a frente tecnológica da iniciativa.",
+  "actions": [
+    {
+      "text": "Doe",
+      "to": "https://www.catarse.me/queridodiario-okbr",
+      "style": "link-secondary"
+    },
+    {
+      "text": "Documentação",
+      "to": "https://docs.queridodiario.ok.org.br",
+      "style": "link-secondary"
+    },
+    {
+      "text": "Relatórios",
+      "route": "/tecnologia",
+      "fragment": "relatorios",
+      "style": "link-secondary"
+    },
+    {
+      "text": "Busca Avançada",
+      "route": "/tecnologia/busca-avancada",
+      "style": "link-secondary"
+    }
+  ]
+}

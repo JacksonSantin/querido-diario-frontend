@@ -1,0 +1,35 @@
+name: 📰 Novo Post
+description: Sugira um novo conteúdo a ser postado
+title: "[Novo Post]: "
+labels: ["good first issue"]
+body:
+    - type: input
+      attributes:
+        label: Link do conteúdo
+        description: Podendo ser outra página da internet, arquivo em formato aberto, link para editor de texto online (lembre de alterar as permissões)
+      validations:
+        required: true
+    - type: input
+      attributes:
+        label: Número do post no site do Querido Diário 
+        description: "Exemplo: se o projeto tiver 30 postagens, esta será a 31ª"
+      validations:
+        required: true
+    - type: input
+      attributes:
+        label: Qual será a categoria dessa postagem?
+        description: Veja as que já existem na página de blog ou sugira outra
+      validations:
+        required: true
+    - type: textarea
+      attributes:
+        label: Caso haja imagens, insira-as aqui
+        description: Para não deixar este repositório pesado, as imagens do projeto são armazenadas em nuvem. Uma vez que você informe as imagens aqui, adicionaremos na nuvem.
+      validations:
+        required: true
+    - type: textarea
+      attributes:
+        label: Outros
+        description: Descreva outras informações relevantes.
+      validations:
+        required: false

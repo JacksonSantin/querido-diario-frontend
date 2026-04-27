@@ -1,0 +1,33 @@
+{
+  "title": "REDES SOCIAIS",
+  "icons": [
+    {
+      "file": "bluesky",
+      "height": 36,
+      "width": 36,
+      "to": "https://bsky.app/profile/ok.org.br",
+      "target": "_blank"
+    },
+    {
+      "file": "mastodon",
+      "height": 36,
+      "width": 36,
+      "to": "https://mastodon.social/@okbr",
+      "target": "_blank"
+    },
+    {
+      "file": "instagram",
+      "height": 36,
+      "width": 36,
+      "to": "[removido]",
+      "target": "_blank"
+    },
+    {
+      "file": "linkedin",
+      "height": 36,
+      "width": 36,
+      "to": "https://br.linkedin.com/company/open-knowledge-brasil",
+      "target": "_blank"
+    }
+  ]
+}

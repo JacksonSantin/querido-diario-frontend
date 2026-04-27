@@ -1,0 +1,130 @@
+<app-column>
+  <ng-template #loading>
+    <app-container theme="light" fxFill>
+      <mat-spinner *ngIf="loading"></mat-spinner>
+    </app-container>
+  </ng-template>
+  <ng-container *ngIf="content$ | async as content; else loading">
+    <app-container theme="light">
+      <div class="container-inner form-search-container">
+        <h1>
+          {{ 'explore.title' | translate }}
+        </h1>
+        <app-search-form></app-search-form>
+      </div>
+    </app-container>
+
+    <app-container [gap]="34">
+      <h1>{{ 'evolution.title' | translate }}</h1>
+      <app-row layoutAlign="space-between" [flex]="true" [gap]="30">
+        <app-column *ngFor="let item of 'evolution.items' | translate">
+          <app-row
+            [gap]="24"
+            layoutAlign="left"
+          >
+            <app-icon [icon]="item.icon" class="evolution-icon"></app-icon>
+            <app-column [gap]="16">
+              <span class="number">{{ item.count }}</span>
+              <p>{{ item.text }}</p>
+            </app-column>
+          </app-row>
+        </app-column>
+      </app-row>
+      <ng-container *ngFor="let action of 'evolution.actions' | translate">
+        <app-row class="evolution-link" [gap]="6">
+          <a [routerLink]="action.to">
+            {{ action.text }}
+          </a>
+          <app-icon
+            class="center"
+            [icon]="{ file: 'white-arrow', height: 12, width: 12 }"
+          >
+          </app-icon>
+        </app-row>
+      </ng-container>
+    </app-container>
+
+    <app-container theme="light" id="casos" [gap]="34" *ngIf="content$ | async as content; else loading">
+      <div class="container-inner stories-area-title">
+        <h1>{{ 'useCases.title' | translate }}</h1>
+        <p>{{ 'useCases.text' | translate }}</p>
+      </div>
+      <app-row [gap]="17" wrap="wrap" [flex]="true">
+        <div class="stories-overflow">
+          <edu-carousel [type]="'second-type'" [items]="content.useCases.items"></edu-carousel>
+        </div>
+      </app-row>
+    </app-container>
+
+    <app-container  bg="bg-purple-square-blurred" [gap]="34" theme="dark-tertiary">
+      <h1>{{ 'help.title' | translate }}</h1>
+      <app-row layoutAlign="space-between" [flex]="true" [gap]="60">
+        <app-column
+          [appWidth]="380"
+          fxFill.xs
+          *ngFor="let item of 'help.items' | translate"
+        >
+          <app-column [gap]="24" [flex]="true">
+            <app-icon [icon]="item.icon"></app-icon>
+            <app-column class="help-text-area" [gap]="36" [gapXs]="2">
+              <app-column class="help-text" [gap]="16" appFlexWidth>
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.text }}</p>
+              </app-column>
+              <app-row [gap]="12">
+                <ng-container *ngFor="let action of item.actions">
+                  <a
+                    *ngIf="action.to"
+                    [ngClass]="action.style"
+                    [href]="action.to"
+                    target="_blank"
+                  >
+                    {{ action.text }}
+                  </a>
+                  <a
+                    *ngIf="action.route"
+                    [ngClass]="action.style"
+                    [routerLink]="action.route"
+                    [fragment]="action.fragment"
+                  >
+                    {{ action.text }}
+                  </a>
+                </ng-container>
+              </app-row>
+            </app-column>
+          </app-column>
+        </app-column>
+      </app-row>
+    </app-container>
+
+    <app-container theme="light" id="midia" [gap]="34" *ngIf="content$ | async as content; else loading">
+      <div class="container-inner stories-area-title">
+        <h1>{{ 'mediaImpact.title' | translate }}</h1>
+      </div>
+      <app-row [gap]="17" wrap="wrap" [flex]="true">
+        <div class="stories-overflow">
+          <edu-carousel [type]="'second-type'" [items]="content.mediaImpact.items"></edu-carousel>
+        </div>
+      </app-row>
+    </app-container>
+
+    <app-container [gap]="34" id="entenda" theme="dark">
+      <app-infos theme="dark"></app-infos>
+    </app-container>
+
+    <app-container theme="light">
+      <app-row [gap]="70" [gapXs]="16" [flex]="true">
+        <ng-container *ngFor="let item of 'realization' | translate">
+          <app-column [gap]="14">
+            <p>{{ item.title }}</p>
+            <app-row wrap="wrap" [gap]="14">
+              <ng-container *ngFor="let icon of item.icons">
+                <app-icon class="realization-icon" [icon]="icon"></app-icon>
+              </ng-container>
+            </app-row>
+          </app-column>
+        </ng-container>
+      </app-row>
+    </app-container>
+  </ng-container>
+</app-column>
